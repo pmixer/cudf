@@ -67,6 +67,10 @@ std::unique_ptr<column> xxhash_64(table_view const& input,
                                   rmm::cuda_stream_view,
                                   rmm::device_async_resource_ref mr);
 
+std::unique_ptr<column> hive_hash(table_view const& input,
+                                  rmm::cuda_stream_view,
+                                  rmm::device_async_resource_ref mr);
+
 /* Copyright 2005-2014 Daniel James.
  *
  * Use, modification and distribution is subject to the Boost Software

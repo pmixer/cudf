@@ -358,6 +358,7 @@ add_library(
   src/hash/sha384_hash.cu
   src/hash/sha512_hash.cu
   src/hash/xxhash_64.cu
+  src/hash/hive_hash.cu
   src/interop/dlpack.cpp
   src/interop/from_arrow.cu
   src/interop/arrow_utilities.cpp

@@ -180,6 +180,7 @@ ConfigureTest(
   hashing/sha384_test.cpp
   hashing/sha512_test.cpp
   hashing/xxhash_64_test.cpp
+  hashing/hive_hash_test.cpp
 )
 
 # ##################################################################################################
