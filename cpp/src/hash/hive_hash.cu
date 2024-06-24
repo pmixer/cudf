@@ -52,7 +52,7 @@ std::unique_ptr<column> hive_hash(table_view const& input,
   thrust::tabulate(rmm::exec_policy(stream),
                    output_view.begin<hash_value_type>(),
                    output_view.end<hash_value_type>(),
-                   row_hasher.device_hasher<HiveHasher>(nullable));
+                   row_hasher.device_hasher<HiveHash>(nullable));
 
   return output;
 }
@@ -64,7 +64,7 @@ std::unique_ptr<column> hive_hash(table_view const& input,
                                   rmm::device_async_resource_ref mr)
 {
   CUDF_FUNC_RANGE();
-  return detail::hive_hash(input, seed, stream, mr);
+  return detail::hive_hash(input, stream, mr);
 }
 
 }  // namespace hashing
